@@ -1,0 +1,6 @@
+// Remove Hentry Error in Google WebMasters tool - © MC.Naveen (themcn.in)
+add_filter( 'post_class', 'remove_hentry' );
+function remove_hentry( $class ) {
+	$class = array_diff( $class, array( 'hentry' ) );	
+	return $class;
+}
